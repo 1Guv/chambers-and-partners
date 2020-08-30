@@ -1,0 +1,43 @@
+
+<app-header [inputSideNav]="sideNav" (toggle)="togSideNav($event)"></app-header>
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sideNav
+               mode="side"
+               [ngClass]="{'menu-half-open': isSideNaveMenuOpen, 'menu-half-close': !isSideNaveMenuOpen}"
+               opened>
+               <div class="d-flex flex-column ml-2">
+                    <a [routerLink]="'/welcome'">
+                        <button mat-icon-button>
+                        <mat-icon>gavel</mat-icon>
+                        Welcome
+                        </button>
+                    </a>
+
+                  <a [routerLink]="'/users'">
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                      Users
+                    </button>
+                  </a>
+
+                  <a [routerLink]="'/posts'">
+                    <button mat-icon-button>
+                      <mat-icon>description</mat-icon>
+                      Posts
+                    </button>
+                  </a>
+               </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="d-flex flex-column justify-content-center">
+      <div class="text-center">
+        <router-outlet></router-outlet>
+      </div>
+      
+    </div>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>

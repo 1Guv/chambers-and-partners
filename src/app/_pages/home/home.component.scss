@@ -1,0 +1,22 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav {
+    visibility: visible !important;
+    // transform: translate3d(-70%,0,0) !important;
+}
+
+.menu-half-open {
+    // visibility: visible !important;
+    // transform: translate3d(-100%,0,0) !important;
+    width: 150px;
+    // background-color: yellow;
+}
+
+.menu-half-close {
+    visibility: invisible !important;
+    transform: translate3d(0%,0,0) !important;
+    width: 37px;
+    // background-color: green;
+}

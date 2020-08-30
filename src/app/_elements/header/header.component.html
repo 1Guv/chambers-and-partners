@@ -1,0 +1,26 @@
+<div class="container-fluid border-bottom">
+    <div class="row">
+        <mat-toolbar class="col d-flex flex-row">
+
+            <a [routerLink]="'/'">
+                <img src="../../../assets/lorem-logo.png" class="d-none d-sm-block logo">
+            </a>
+
+            <a [routerLink]="'/'" class="ml-sm-auto">
+                <div class="d-inline-block d-sm-none">Lorem.io</div>
+            </a>
+
+            <ng-container *ngIf="randomUser?.name">
+                <button mat-icon-button>
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                {{ randomUser?.name }}
+
+                <button class="ml-5" mat-icon-button>
+                    <mat-icon (click)="inputSideNav.toggle()" (click)="tog($event)">menu</mat-icon>
+                </button>
+            </ng-container>
+
+        </mat-toolbar>
+    </div>
+</div>
