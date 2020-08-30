@@ -19,7 +19,7 @@ export interface Address {
 
 export interface Company {
     name: string;
-    cathchPhrase: string;
+    catchPhrase: string;
     bs: string;
 }
 

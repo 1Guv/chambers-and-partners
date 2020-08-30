@@ -1,1 +1,23 @@
-<p>users works!</p>
+<div class="m-5">
+    <h1>{{title}}</h1>
+
+    <div *ngFor="let user of users">
+        <span class="d-flex flex-column align-items-center">
+            <mat-card class="m-3 d-flex col-12 col-lg-10">
+                <div class="">
+                    <h4 class="text-left">{{ user.name }}</h4>
+                    <div class="text-left">Username: {{ user.username }}</div>
+                    <div class="text-left">Email: {{ user.email }}</div>
+                </div>
+    
+                <div class="ml-5">
+                    <h5 class="text-left">Company:</h5>
+                    <div class="text-left">Name: {{ user.company.name }}</div>
+                    <div class="text-left">BS: {{ user.company.bs }}</div>
+                    <div class="text-left">Cathchprase: {{ user.company.catchPhrase }}</div>
+                </div>
+            </mat-card>
+        </span>
+    </div>
+</div>
+
