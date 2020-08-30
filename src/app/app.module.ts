@@ -7,11 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './_pages/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './_elements/header/header.component';
-import { MatSnackBarModule, MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatSidenavModule, MatCardModule } from '@angular/material';
+import { MatSnackBarModule, MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatSidenavModule, MatCardModule, MatDialogModule } from '@angular/material';
 import { UsersComponent } from './_pages/users/users.component';
 import { PostsComponent } from './_pages/posts/posts.component';
 import { HomeComponent } from './_pages/home/home.component';
 import { WelcomeComponent } from './_pages/welcome/welcome.component';
+import { DialogComponent } from './_pages/dialog/dialog.component';
+import { PostDialogComponent } from './_pages/post-dialog/post-dialog.component';
+import { UsersDialogComponent } from './_pages/users-dialog/users-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { WelcomeComponent } from './_pages/welcome/welcome.component';
     UsersComponent,
     PostsComponent,
     HomeComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    DialogComponent,
+    PostDialogComponent,
+    UsersDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +40,10 @@ import { WelcomeComponent } from './_pages/welcome/welcome.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
+  entryComponents: [DialogComponent, PostDialogComponent, UsersDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

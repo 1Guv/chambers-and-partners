@@ -1,0 +1,23 @@
+<div>
+    <h1 mat-dialog-title>{{ data.name }}</h1>
+    <mat-dialog-content>
+        <div>{{ data.dataname }}</div>
+        <div>{{ data.email }}</div>
+        <div>{{ data.phone }}</div>
+        <div>{{ data.website }}</div>
+        <br>
+        <div>{{ data.address.street }}</div>
+        <div>{{ data.address.suite }}</div>
+        <div>{{ data.address.zipcode }}</div>
+        <div>{{ data.address.city }}</div>
+        <div>{{ data.address.geo.lat }}</div>
+        <div>{{ data.address.geo.lng }}</div>
+        <br>
+        <div>{{ data.company.name }}</div>
+        <div>{{ data.company.bs }}</div>
+        <div>{{ data.company.catchPhrase }}</div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button color="primary" mat-raised-button mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</div>

@@ -3,7 +3,7 @@
 
     <div *ngFor="let post of posts">
         <mat-card class="m-3">
-            <h4 class="text-left">{{ post.title }}</h4>
+            <h4 class="text-left" (click)="showPostDialog(post)">{{ post.title }}</h4>
             <p class="text-left body">{{ post.body }}</p>
             <p class="text-right">Posted by: {{ post?.user?.name }}</p>
         </mat-card>

@@ -5,8 +5,8 @@
         <span class="d-flex flex-column align-items-center">
             <mat-card class="m-3 d-flex col-12 col-lg-10">
                 <div class="">
-                    <h4 class="text-left">{{ user.name }}</h4>
-                    <div class="text-left">Username: {{ user.username }}</div>
+                    <h4 (click)="openDialog(user)" class="text-left">{{ user.name }}</h4>
+                    <div (click)="openDialog(user)" class="text-left">Username: {{ user.username }}</div>
                     <div class="text-left">Email: {{ user.email }}</div>
                 </div>
     
