@@ -1,1 +1,12 @@
-<p>posts works!</p>
+<div class="m-5">
+    <h1>{{title}}</h1>
+
+    <div *ngFor="let post of posts">
+        <mat-card class="m-3">
+            <h4 class="text-left">{{ post.title }}</h4>
+            <p class="text-left">{{ post.body }}</p>
+            <p class="text-right">Posted by: {{ post?.user?.name }}</p>
+        </mat-card>
+    </div>
+</div>
+

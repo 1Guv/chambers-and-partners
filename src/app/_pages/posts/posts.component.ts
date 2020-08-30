@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/_services/api.service';
 export class PostsComponent implements OnInit {
 
   posts: Array<Post>;
+  title = 'Posts';
 
   constructor(private api: ApiService) { }
 
@@ -19,10 +20,21 @@ export class PostsComponent implements OnInit {
 
   getPosts() {
     this.api.posts()
-      .subscribe(data => {
-        this.posts = data;
+      .subscribe(posts => {
+        this.posts = posts;
         console.log("PostsComponent -> getPosts -> this.posts", this.posts)
-      })
+        this.addUsersToPosts(this.posts);
+      })      
+  }
+
+  public addUsersToPosts(posts: Array<Post>) {
+    posts.forEach(post => {
+      this.api.individualUser(post.userId)
+        .subscribe(user => {
+          post.user = user[0];
+        })
+    })
+    console.log("posts with users", this.posts)
   }
 
 }

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './_pages/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './_elements/header/header.component';
-import { MatSnackBarModule, MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatSidenavModule } from '@angular/material';
+import { MatSnackBarModule, MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatSidenavModule, MatCardModule } from '@angular/material';
 import { UsersComponent } from './_pages/users/users.component';
 import { PostsComponent } from './_pages/posts/posts.component';
 import { HomeComponent } from './_pages/home/home.component';
@@ -33,7 +33,8 @@ import { WelcomeComponent } from './_pages/welcome/welcome.component';
     MatTooltipModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
