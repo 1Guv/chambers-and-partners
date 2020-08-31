@@ -34,11 +34,17 @@ export class PostsComponent implements OnInit {
   }
 
   public addUsersToPosts(posts: Array<Post>) {
-    posts.forEach(post => {
-      this.api.individualUser(post.userId)
-        .subscribe(user => {
-          post.user = user[0];
-        })
+
+    this.api.users().subscribe(users => {
+      const allUsers = users;
+
+      posts.forEach(post => {
+        allUsers.filter(user => {
+          if (user.id === post.userId) {
+            post.user = user;
+          }
+        });
+      })
     })
     console.log("posts with users", this.posts)
   }
